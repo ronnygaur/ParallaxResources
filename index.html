@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>parallox website</title>
+         
+</head>
+
+<body>
+
+    <header id="header">
+        <a href="#" class="logo">Jungle</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="text"><span>It's time for an new</span><br>Adventure</h2>
+        <img src="/bird1.png" id="bird1">
+        <img src="/bird2.png" id="bird2">
+        <img src="/forest.png" id="forest">
+        <a href="#" id="btn">Explore</a>
+        <img src="/rocks.png" id="rocks">
+        <img src="/water.png" id="water"> 
+    </section>
+    
+    <div class="sec">
+        <h2>Parallex scrolling effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit mollitia tempora et! Id, animi repellat laborum odit doloribus totam maxime quam consequatur aperiam nihil, blanditiis aspernatur, accusamus eligendi? Eum cupiditate reiciendis natus placeat fuga porro quod? Iusto tempora ad provident nihil perferendis fuga consectetur veritatis delectus sunt architecto ex repellat fugit hic deserunt quas animi iure nisi, enim voluptas excepturi! Iure reprehenderit sequi modi dolorum. At consequatur vitae quos? Odio tempora nam consectetur natus quibusdam deserunt doloribus quia modi itaque sunt, quaerat inventore id, non dolor cum eos rem laborum ipsam soluta consequatur earum? Expedita tempora assumenda dolorum minima quo.<br><br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus voluptas impedit blanditiis eligendi necessitatibus expedita modi distinctio id quibusdam reiciendis. Mollitia est sunt voluptatum magnam alias odio nihil molestias, dolorem magni cupiditate illo placeat ex harum animi similique pariatur id. Nihil porro, minima atque, blanditiis cumque consequuntur sunt voluptatum numquam amet accusantium quam necessitatibus illo sint cupiditate earum ut officiis quo. Asperiores possimus error iusto suscipit est tempore molestias, voluptate officia aliquam repellat blanditiis odit debitis corporis maxime. Consectetur, ducimus aperiam possimus quaerat delectus aspernatur atque, rerum sapiente consequatur ipsam voluptatem cupiditate laudantium molestias totam voluptates iusto cumque. Quaerat, magni.<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, qui? Dolore similique quasi odio perferendis, mollitia quidem? Aut minus tenetur asperiores omnis optio, expedita quae sit tempore consectetur sapiente repellendus distinctio et repudiandae maiores, error, delectus aspernatur non? Labore magnam iusto sed nostrum provident laboriosam aliquam animi odit placeat nisi impedit excepturi voluptatum harum quibusdam culpa ipsa cumque, incidunt dolorum neque atque repellat. Facere rem et repellendus fugit quisquam nam nesciunt assumenda. Minima rerum eum est harum deserunt quod alias distinctio vel laudantium praesentium dolorum nulla mollitia omnis ducimus ad, beatae unde dolores laborum explicabo in libero soluta nobis nesciunt.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maxime asperiores ducimus quos, laudantium maiores veritatis veniam, fugit magni aliquid commodi doloremque nihil velit possimus harum explicabo quas modi error, cum fuga quasi incidunt minus perferendis! Inventore, ad earum iste aliquam enim, delectus nihil consequatur illum possimus, dolorum a asperiores voluptatum. Quod praesentium facilis dolorum quia doloremque repellendus, mollitia veniam accusamus vero libero magni nostrum quo nesciunt voluptatibus, earum repudiandae laboriosam qui impedit necessitatibus? Sapiente sunt, porro ratione, cum assumenda, rerum iusto alias exercitationem libero culpa accusamus nemo.</p>
+    </div>
+
+    <script>
+        let text=document.getElementById('text');
+        let bird1=document.getElementById('bird1');
+        let bird2=document.getElementById('bird2');
+        let btn=document.getElementById('btn');
+        let rocks=document.getElementById('rocks');
+        let forest=document.getElementById('forest');
+        let water=document.getElementById('water');
+        let header=document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value=window.scrollY;
+            text.style.top=50+value*-0.5+'%';
+            bird1.style.top=value*-1.5+'px';
+            bird1.style.left=value*2+'px';
+            bird2.style.top=value*-1.5+'px';
+            bird2.style.left=value*-5+'px';
+            btn.style.marginTop=value*1.5+'px';
+            rocks.style.top=value*-0.12+'px';
+            forest.style.top=valaue*0.25+'px';
+            header.style.top=value*0.5+'px';
+        })
+    </script>
+</body>
+
+</html>
